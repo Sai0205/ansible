@@ -1,0 +1,11 @@
+- name: variables in ansible
+  hosts: mangodb
+  vars:
+    course: devops
+  tasks:
+  - name: print hello world
+    ansible.builtin.debug:
+      msg: "hello world"
+  - name: printing using variables
+    ansible.builtin.debug:
+      msg: "i am learning {{couser}}"
