@@ -13,5 +13,5 @@
       msg: "output is {{output.rc}}"
   - name: create a user
     ansible.builtin.user:
-      name: deepak
+      name: {{user}}
     when: output.rc != 0
