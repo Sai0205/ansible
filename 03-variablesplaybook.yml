@@ -8,4 +8,4 @@
       msg: "hello world"
   - name: printing using variables
     ansible.builtin.debug:
-      msg: "i am learning {{couser}}"
+      msg: "i am learning {{course}}"
