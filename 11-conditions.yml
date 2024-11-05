@@ -12,3 +12,7 @@
   - name: print exitstatus
     ansible.builtin.debug:
       msg: "{{output.rc}}"
+  - name: create a user if not created
+    ansible.builtin.user:
+      name: roboshop
+    when: output.rc !=0
