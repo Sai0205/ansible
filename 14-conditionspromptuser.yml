@@ -1,6 +1,6 @@
 - name: create user only after prompting
   hosts: localhost
-  vars_prompt
+  vars_prompt:
 
   - name: user
     prompt: please enter user to be created
