@@ -1,0 +1,6 @@
+- name: vars from command line
+  hosts: localhost
+  tasks:
+  - name: print varables form command prompt
+    ansible.builtin.debug:
+     msg: "this is {{course}}"
