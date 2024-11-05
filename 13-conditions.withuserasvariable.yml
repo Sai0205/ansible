@@ -1,0 +1,17 @@
+- name: creating user with users as variable
+  hosts: localhost
+  vars:
+    user: deepak
+  tasks:
+  - name: check if user available or not
+    ansible.builtin.command: id {{user}}
+    register: output
+    ignore_errors: true
+
+  - name: print the output
+    ansible.builtin.debug:
+      msg "output is {{output.rc}}"
+  - name: create a user
+    ansible.builtin.user:
+      name: deepak
+    when output.rc != 0
