@@ -20,3 +20,8 @@ mysql
 [app:children]
 cart
 user
+
+
+[mangodb:vars]
+username=admin
+password=password

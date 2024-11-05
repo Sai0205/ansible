@@ -1,0 +1,6 @@
+- name: var from inventory
+  hosts: mangodb
+  tasks:
+  - name: var from inven
+    ansible.builtin.debug:
+     msg: "{{username} and {{password}}}"
