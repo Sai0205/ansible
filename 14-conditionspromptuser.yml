@@ -1,0 +1,22 @@
+- name: create user only after prompting
+  hosts: localhost
+  vars_prompt
+
+  - name: user
+    prompt: please enter user to be created
+    private: false
+
+  tasks:
+  - name: check if user present or not
+    ansible.builtin.command: id {{user}}
+    register : output
+    ignore_errors: true
+  
+  - name: pritn the output
+    ansible.builtin.debug:
+      msg: "{{output.rc}}"
+  
+  - name: create a user
+    ansible.builtin.user:
+      name: santhosh
+    when: output.rc != 0
