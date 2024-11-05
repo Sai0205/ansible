@@ -10,8 +10,8 @@
 
   - name: print the output
     ansible.builtin.debug:
-      msg "output is {{output.rc}}"
+      msg: "output is {{output.rc}}"
   - name: create a user
     ansible.builtin.user:
       name: deepak
-    when output.rc != 0
+    when: output.rc != 0
