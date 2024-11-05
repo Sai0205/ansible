@@ -3,7 +3,7 @@
   tasks:
   - name: tasklevel var declare
     vars:
-    - money: "20000"
+      money: "20000"
       house: "3 houses"
     ansible.builtin.debug:
      msg: "{{money}} and {{house}}}"
