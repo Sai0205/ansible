@@ -11,5 +11,5 @@
 
   tasks:
   - name: printing variables from prompt
-  ansible.builtin.debug:
-   msg: "{{username}} and {{password}}"
+    ansible.builtin.debug:
+    msg: "{{username}} and {{password}}"
