@@ -1,7 +1,7 @@
 - name: variables in ansible
   hosts: mangodb
   vars:
-    course: devops
+    course: devops #playlevel variables
   tasks:
   - name: print hello world
     ansible.builtin.debug:
